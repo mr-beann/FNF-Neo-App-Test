@@ -133,15 +133,25 @@
 				console.log('Code Executed line 125');
 				}  
 				if (window.matchMedia('(display-mode: standalone)').matches === true) {
-     			  window.clearInterval(timer);
+					window.clearInterval(timer);
 				  console.log('Install = true');
+				  var interval = 400;
+			var timerr = window.setInterval(function(){
+				if (window.matchMedia('(display-mode: standalone)').matches) {  
+
+				}  
+				else {
+					console.log('Installed = False');
+					window.location.reload();
+				}
+		}, interval);
     			}
 				else {
 					console.log('Installed = False');
 				}
 		}, interval);
 	}
-	</script>
-	
+
+		</script>
 </body>
 </html>
